@@ -48,7 +48,7 @@ function draw(){
     strokeWeight(0.5);
 	// noStroke();
 	
-	let lineX = 250;
+	let lineX = 200;
 	line(250,0,250,height);
 
     // 슬라이더 캡션 작성 ---------------------------
@@ -60,6 +60,13 @@ function draw(){
     text("Radius", 23,height-155);
     text("Speed", 23,height-105);
     text("Scale-M", 23,height-55);
+		
+		textSize(27);
+	  text("p5.js", 23,35);
+		text("Interactive", 23,70);
+	  text("Visual Type", 23,105);
+
+
     pop();
 
     // 슬라이더 value 값 업데이트--------------------
@@ -127,47 +134,47 @@ function draw(){
 
     // 글자 함수들 ---------------------
     push();
-    translate(0,0);
+    translate(350,0);
     SolidA();
     pop();
 
     push()
-    translate(100,0);
+    translate(250+300,0);
     stroke(255,255,255);
     strokeWeight(sliderStrokevalue);
     LineM();
     pop();
 
     push();
-    translate(200,0);
+    translate(250+500,0);
     LightSolidO();
     pop();
 
     push();
-    translate(300,0)
+    translate(250+700,0)
     SolidD();
     pop();
 
     push();
-    translate(400,0);
+    translate(250+900,0);
     stroke(255,255,255);
     strokeWeight(sliderStrokevalue);
     LightLineO();
     pop();
 
     push();
-    translate(500,0);
+    translate(250+1100,0);
     SolidM();
     pop();
 
     push();
-    translate(600,0)
+    translate(250+1300,0)
     strokeWeight(sliderStrokevalue);
     LineN();
     pop();
 
     push();
-    translate(700,0);
+    translate(250+1500,0);
     SolidT();
     pop();
 
@@ -215,7 +222,7 @@ function EllipseO_Center(){
 
     for(let angle=0; angle<360; angle=angle+40){
         push();
-        translate(width/2 + 250,height/2);
+        translate(width/2 + 200,height/2);
         scale(sliderScaleValue);
         strokeWeight(sliderStrokevalue);
         translate(cos(angle)*40, sin(angle)*40);
